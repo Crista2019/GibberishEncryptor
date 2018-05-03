@@ -1,4 +1,6 @@
 # import the 'tkinter' module
+import os
+from PIL import ImageTk, Image
 try:
     import Tkinter as tkinter
     from Tkinter import font
@@ -84,7 +86,7 @@ def display():
     # resizing: width x height + x_offset + y_offset:
     window.geometry("900x620+30+30")
     # window.wm_iconbitmap("phone.ico")
-    window.configure(background="#542344")
+    window.configure(background="#fefefe")
     # custom fonts
     instructionsFont = font.Font(family='Times', size=8)
     inputFont = font.Font(family='Helvetica', size=11)
@@ -94,32 +96,37 @@ def display():
 # Widgets: essentially elements in the window
 
 # Title
-title = tkinter.Label(window, text="BSU Computer Science Principles\nCrista Falk\n 5/2018", fg="#EBF5EE", bg="#653455", font="outputFont")
-title.place(relwidth = 0.5, relheight = 0.2, relx = 0.25, rely = 0.1)
+title_image = ImageTk.PhotoImage(Image.open("C:/Projects/R/GUI/title_image.gif"))
+title = tkinter.Label(window, background="#fefefe", image=title_image, font="outputFont")
+title.place(relwidth = 0.95, relheight = 0.2, relx = 0.025, rely = 0.1)
 
 # User input: message
-inputEntry = tkinter.Entry(window, fg="#542344", font="inputFont")
-inputEntry.place(relwidth = 0.4, relheight = 0.06, relx = 0.3, rely = 0.35)
+inputEntry = tkinter.Entry(window, font="inputFont")
+inputEntry.place(relwidth = 0.6, relheight = 0.06, relx = 0.2, rely = 0.4)
 
 # Adding "p" in the middle of vowels: "a" => "apa"
-verlanBtn = tkinter.Button(window, text="Verlan", bg="#DAE4DD", command=verlan, font="btnFont")
-verlanBtn.place(relwidth = 0.14, relheight = 0.08, relx = 0.44, rely = 0.45)
+verlanBtn = tkinter.Button(window, text="Verlan", fg="#3d3d3d", bg="#f0f0f0", command=verlan, font="btnFont")
+# verlanBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.44, rely = 0.45)
+verlanBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.35, rely = 0.65)
 
 # First letter is put after each word with the suffix "-ay"
-pigLatinBtn = tkinter.Button(window, text="Pig Latin", bg="#DAE4DD", command=pigLatin, font="btnFont")
-pigLatinBtn.place(relwidth = 0.14, relheight = 0.08, relx = 0.44, rely = 0.55)
+pigLatinBtn = tkinter.Button(window, text="Pig Latin", fg="#3d3d3d", bg="#f0f0f0", command=pigLatin, font="btnFont")
+# pigLatinBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.44, rely = 0.55)
+pigLatinBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.51, rely = 0.55)
 
 # All vowels except first letter are removed (text still readable)
-compressedBtn = tkinter.Button(window, text="Compressed", bg="#DAE4DD", command=compressed, font="btnFont")
-compressedBtn.place(relwidth = 0.14, relheight = 0.08, relx = 0.44, rely = 0.65)
+compressedBtn = tkinter.Button(window, text="Compressed", fg="#3d3d3d", bg="#f0f0f0", command=compressed, font="btnFont")
+# compressedBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.44, rely = 0.65)
+compressedBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.35, rely = 0.55)
 
 # Adding "p" in the middle of vowels: "a" => "apa"
-gibberishBtn = tkinter.Button(window, text="Jeringonza", bg="#DAE4DD", command=gibberish, font="btnFont")
-gibberishBtn.place(relwidth = 0.14, relheight = 0.08, relx = 0.44, rely = 0.75)
+gibberishBtn = tkinter.Button(window, text="Jeringonza", fg="#3d3d3d", bg="#f0f0f0", command=gibberish, font="btnFont")
+# gibberishBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.44, rely = 0.75)
+gibberishBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.51, rely = 0.65)
 
 # Output: changed message
-translatedMsg = tkinter.Label(window, text=output, fg="#EBF5EE", bg="#653455", font="outputFont",)
-translatedMsg.place(relwidth = 0.8, relheight = 0.1, relx = 0.1, rely = 0.85)
+translatedMsg = tkinter.Label(window, text=output, fg="#551A8B", bg="#fafafa", font="outputFont",)
+translatedMsg.place(relwidth = 0.8, relheight = 0.1, relx = 0.1, rely = 0.8)
 
 display()
 # draw the window and begin application
