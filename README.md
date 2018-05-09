@@ -14,3 +14,15 @@ A short project for my CS principles class which translates a message into diffe
 ... [Jeringonza](https://www.mamalisa.com/blog/jeringonza-a-spanish-word-game-like-pig-latin/)
 
 3. Receive your translation!
+
+## How to Download:
+1. After navigating to this repository, select the green button to the top-right of the screen and choose "Download as Zip"
+2. Unzip the file and move the "gibberish" file to your C: drive
+3. Ensure that your computer runs the most recent version of Python 3.6
+4. Click the gibberish_encryption.py to run the program!
+
+*If the program does not run properly, open the gibberish_encryption.py file with any text editor and confirm that the line
+  ```
+  title_image = ImageTk.PhotoImage(Image.open("C:/gibberish/title_image.gif"))
+  ```
+  leads to the location of title_image.gif in your computer. This should be the same file path as "gibberish_encryption.py"
