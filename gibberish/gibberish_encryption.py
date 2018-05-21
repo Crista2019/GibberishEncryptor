@@ -8,9 +8,7 @@ except ImportError:  # Python 3
     import tkinter
     from tkinter import font
 
-# http://usingpython.com/python-widgets/
-
-# create a new window
+# creates a new window
 window = tkinter.Tk()
 
 # defining data structures and variables
@@ -32,6 +30,7 @@ def getEntryData():
     else:
         return ["Please", "type", "a", "message"]
 
+# This function takes the first letter of a word an puts it in front of the phrase -ay, as long as the first letter is a consonant
 def pigLatin():
     translatedArray = []
     text = getEntryData()
@@ -45,6 +44,7 @@ def pigLatin():
     finalTranslation = " ".join(str(x) for x in translatedArray)
     showMessage(finalTranslation)
 
+# This function removes vowels from the middles of words, resulting in a compressed but still intelligible message
 def compressed():
     translatedArray = []
     text = getEntryData()
@@ -58,6 +58,7 @@ def compressed():
     finalTranslation = " ".join(str(x) for x in translatedArray)
     showMessage(finalTranslation)
 
+# This breaks up and concatenates phrases with the letter "p" between vowels
 def gibberish():
     translatedArray = []
     text = getEntryData()
@@ -69,6 +70,7 @@ def gibberish():
     finalTranslation = " ".join(str(x) for x in translatedArray)
     showMessage(finalTranslation)
 
+# Reverses the order of letters in a message
 def verlan():
     translatedString = ""
     text = " ".join(str(x) for x in getEntryData())
@@ -76,10 +78,12 @@ def verlan():
          translatedString = i + translatedString
     showMessage(translatedString)
 
+# Takes the finished message and formats it to be displayed (used repeatedly)    
 def showMessage(newOutput):
     message = newOutput[0].upper() + newOutput[1:]
     translatedMsg.configure(text=message)
 
+# Configures the screen settings
 def display():
     # window title
     window.title("Translator")
@@ -128,6 +132,6 @@ gibberishBtn.place(relwidth = 0.14, relheight = 0.07, relx = 0.51, rely = 0.65)
 translatedMsg = tkinter.Label(window, text=output, fg="#551A8B", bg="#fafafa", font="outputFont",)
 translatedMsg.place(relwidth = 0.8, relheight = 0.1, relx = 0.1, rely = 0.8)
 
-display()
 # draw the window and begin application
+display()
 window.mainloop()
