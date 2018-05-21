@@ -96,7 +96,7 @@ def display():
 # Widgets: essentially elements in the window
 
 # Title
-title_image = ImageTk.PhotoImage(Image.open("C:/gibberish/title_image.gif""))
+title_image = ImageTk.PhotoImage(Image.open("C:\gibberish\title_image.gif"))
 title = tkinter.Label(window, background="#fefefe", image=title_image, font="outputFont")
 title.place(relwidth = 0.95, relheight = 0.2, relx = 0.025, rely = 0.1)
 
