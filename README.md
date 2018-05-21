@@ -25,4 +25,5 @@ A short project for my CS principles class which translates a message into diffe
   ```
   title_image = ImageTk.PhotoImage(Image.open("C:/gibberish/title_image.gif"))
   ```
-  leads to the location of title_image.gif in your computer. This should be the same file path as "gibberish_encryption.py"
+  leads to the location of title_image.gif in your computer. You may need to change this. 
+  Hint: the title image should be the same file path as "gibberish_encryption.py"
