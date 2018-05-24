@@ -1,5 +1,5 @@
 # GibberishEncryptor
-A short project for my CS principles class which translates a message into different "gibberish" languages using the Python GUI toolkit Tkinter.
+A short project for my CS principles class which translates a message into different "gibberish" languages using Tkinter (the Python binding to the Tk GUI toolkit).
 
 ## Instructions
 1. Type out your plaintext message
