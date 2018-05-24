@@ -30,4 +30,4 @@ A short project for my CS principles class which translates a message into diffe
 Hint: You may need to change this in the code if you chose not to store the "gibberish" file in your C: drive. 
 The title image should be the same file path as "gibberish_encryption.py"
 
-[![Program Description](https://www.useloom.com/embed/b92d2b71116d4fca8cbe6151a73f50fd)]
+[Explanation of Application](https://www.useloom.com/share/b92d2b71116d4fca8cbe6151a73f50fd)
